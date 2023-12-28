@@ -21,7 +21,8 @@ const FileUpload = ({ contract, account, provider }) => {
             "Content-Type": "multipart/form-data",
           },
         });
-        const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
+        // const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
+        const ImgHash = `https://green-impressed-wasp-871.mypinata.cloud/ipfs/${resFile.data.IpfsHash}`;
         contract.add(account, ImgHash);
         alert("Successfully Image Uploaded");
         setFileName("No image selected");

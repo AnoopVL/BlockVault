@@ -29,8 +29,11 @@ const Display = ({ contract, account }) => {
           <a href={item} key={`a-${i}`} target="_blank">
             <img
               key={`img-${i}`}
-              src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-              // src={item}
+              // src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+              // src={`https://green-impressed-wasp-871.mypinata.cloud/ipfs/${item.substring(
+              //   6
+              // )}`}
+              src={item}
               // src={`https://helpingwithmath.com/wp-content/uploads/2021/10/image-104.png`}
               alt="new"
               className="image-list"
