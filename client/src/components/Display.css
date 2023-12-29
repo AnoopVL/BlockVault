@@ -1,42 +1,83 @@
 .image-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
   grid-auto-rows: 350px;
-  /* border: 2px solid black; */
   margin: 10px;
+  margin-bottom: 30px;
 }
 
 .image-list img {
   width: 250px;
   height: 350px;
-  border: 2px solid black;
-}
-.center {
-  margin: 40px;
+  border: 2px solid grey;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.button {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #009ffd, #2a2a72);
-  border-radius: 6px;
-  color: #ffffff;
-  padding: 5px 10px;
-  border: none;
+.image-list img:hover {
+  transform: scale(1.05);
+}
+
+.dataGet {
+  margin: 40px;
+  --b: 2px; /* border thickness */
+  --s: 0.2em; /* size of the corner */
+  --color: white;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
   font-size: 16px;
-  border-radius: 5px;
-  margin-right: 10px;
-  padding-bottom: 10px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
-.button:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+
+.dataGet:hover,
+.dataGet:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
 }
+
+.dataGet:active {
+  background: var(--color);
+  color: #fff;
+}
+
 .address {
-  display: block;
-  margin: auto;
-  height: 30px;
-  width: 330px;
-  text-align: center;
+  width: 300px;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.address::placeholder {
+  color: #999;
+}
+
+.address:focus {
+  border-color: black;
+  box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
 }
 
 input[type="text"]:focus {

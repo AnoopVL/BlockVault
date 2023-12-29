@@ -20,8 +20,6 @@ const Display = ({ contract, account }) => {
     if (!isEmpty) {
       const str = dataArray.toString();
       const str_array = str.split(",");
-      // console.log(str);
-      // console.log(str_array);
       const images = str_array.map((item, i) => {
         console.log(item);
         return (
@@ -29,12 +27,7 @@ const Display = ({ contract, account }) => {
           <a href={item} key={`a-${i}`} target="_blank">
             <img
               key={`img-${i}`}
-              // src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
-              // src={`https://green-impressed-wasp-871.mypinata.cloud/ipfs/${item.substring(
-              //   6
-              // )}`}
               src={item}
-              // src={`https://helpingwithmath.com/wp-content/uploads/2021/10/image-104.png`}
               alt="new"
               className="image-list"
             ></img>
@@ -54,7 +47,7 @@ const Display = ({ contract, account }) => {
         placeholder="Enter Address"
         className="address"
       ></input>
-      <button className="center button" onClick={getdata}>
+      <button className="dataGet" onClick={getdata}>
         Get Data
       </button>
     </>

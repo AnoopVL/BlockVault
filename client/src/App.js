@@ -58,9 +58,9 @@ function App() {
 
       <div className="App">
         <h1 style={{ color: "white" }}>BlockVault</h1>
-        <div class="bg"></div>
+        {/* <div class="bg"></div>
         <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
+        <div class="bg bg3"></div> */}
 
         <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
