@@ -72,7 +72,7 @@ Once the setup and configuration are complete, follow these steps to utilize the
 4. **Accessing Other User Images:**
    - Use the "Get Data" button to access other users' images. Input the user's address in the designated box, but remember, you can only access their images if they've granted you access through the smart contract. Otherwise, it will throw an error saying "You don't have access".
 
-## Screeshots
+## Screenshots
 
 ![Alt Text](/screenshot/bvHm.png)
 
