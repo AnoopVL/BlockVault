@@ -21,7 +21,7 @@ const FileUpload = ({ contract, account, provider }) => {
             "Content-Type": "multipart/form-data",
           },
         });
-        // const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
+        // const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`; //This one does not work anymore
         const ImgHash = `https://green-impressed-wasp-871.mypinata.cloud/ipfs/${resFile.data.IpfsHash}`;
         contract.add(account, ImgHash);
         alert("Successfully Image Uploaded");
@@ -37,7 +37,6 @@ const FileUpload = ({ contract, account, provider }) => {
   };
   const retrieveFile = (e) => {
     const data = e.target.files[0]; //files array of files object
-    // console.log(data);
     const reader = new window.FileReader();
     reader.readAsArrayBuffer(data);
     reader.onloadend = () => {
